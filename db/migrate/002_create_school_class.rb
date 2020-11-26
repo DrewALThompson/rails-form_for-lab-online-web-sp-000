@@ -1,1 +1,1 @@
-class CreateSchoolClass < ActiveRecord::Migration
+class CreateSchoolClasses < ActiveRecord::Migration
