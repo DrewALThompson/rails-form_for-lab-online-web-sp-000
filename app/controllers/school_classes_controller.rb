@@ -5,7 +5,7 @@ class SchoolClassesController < ApplicationController
   end
   
   def show 
-    @school_class = SchoolClass.find(params[:id])
+    finder
   end 
   
   def new 
@@ -18,15 +18,18 @@ class SchoolClassesController < ApplicationController
   end 
   
   def edit
-    @school_class = SchoolClass.find(params[:id])
+    finder
   end
   
   def update
-    @school_class = SchoolClass.find(params[:id])
+    finder
+    @school_class
   end
   
   private
   
-    def helper
+    def finder
+      @school_class = SchoolClass.find(params[:id])
+    end
       
 end 
