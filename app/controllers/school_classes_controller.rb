@@ -23,7 +23,7 @@ class SchoolClassesController < ApplicationController
   
   def update
     finder
-    @school_class
+    @school_class.update()
   end
   
   private
