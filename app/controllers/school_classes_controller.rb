@@ -23,13 +23,17 @@ class SchoolClassesController < ApplicationController
   
   def update
     finder
-    @school_class.update(params.require(:school_class).permit(*args))
+    @school_class.update()
   end
   
   private
   
     def finder
       @school_class = SchoolClass.find(params[:id])
+    end
+    
+    def school_class(*args)
+      params.require(:school_class).permit(*args)
     end
       
 end 
