@@ -23,7 +23,7 @@ class SchoolClassesController < ApplicationController
   
   def update
     finder
-    @school_class.update(params.require(:school_class))
+    @school_class.update(params.require(:school_class).permit(*args))
   end
   
   private
