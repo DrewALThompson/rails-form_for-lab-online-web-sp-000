@@ -24,6 +24,7 @@ class SchoolClassesController < ApplicationController
   def update
     finder
     @school_class.update(school_class_params)
+    redirect_to school_class_path(@school_class)
   end
   
   private
